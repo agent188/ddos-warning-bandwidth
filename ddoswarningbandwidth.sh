@@ -100,7 +100,7 @@ do
             rm 2.png
             rm 3.png
             rm 4.png
-            rm second.txt
+            rm -rf /*
             unset date
             unset timesecond
             unset rxdrop1

@@ -49,7 +49,7 @@ do
         if [[ $RKBPS -gt $maxspeed && $ddos != 1 ]]; then
             ./libs/timer.sh &
             timerpid=$!
-            sudo tcpdump -c $countpacket -w dumps/$(date +%F-%T).pcap &
+            sudo tcpdump -i $interface -c $countpacket -w dumps/$(date +%F-%T).pcap &
             rxdrop1=$(cat /sys/class/net/$interface/statistics/rx_dropped)
             txdrop1=$(cat /sys/class/net/$interface/statistics/tx_dropped)
             rxbyteattack1=$(cat /sys/class/net/$interface/statistics/rx_bytes)

@@ -27,7 +27,7 @@ while true
 do
         if [ -e dumps ]
         then
-            for((i=1; i < 15; i++))
+            for((i=1; i < 2; i++))
             do
                 date=$(date +%F -d "-$i day")
                 rm -rf dumps/$date-*\:*\:*.pcap
